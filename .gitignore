@@ -60,3 +60,7 @@ crashlytics-build.properties
 
 # JetBrains IDE
 .idea/
+
+# Blender Backup
+*.blend1
+*.blend1.meta
