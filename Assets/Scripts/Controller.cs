@@ -33,8 +33,11 @@ public class Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.F9))
         {
             vr = !vr;
+            // VR
+            controllerVr.enabled = vr;
+            // Desktop
+            desktop.enabled = !vr;
+            GameObject.Find("Player").SetActive(!vr);
         }
-        controllerVr.enabled = vr;
-        desktop.enabled = !vr;
     }
 }
