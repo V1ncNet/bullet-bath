@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 5278abc398e80a04eba48ab1ccc07231
+guid: dc1548d17ddd1499ba06cea0ae2bf9b6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PotatoSmall_mat
-    second: {fileID: 2100000, guid: 06bc08f72595a344389202028de60d96, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
