@@ -67,12 +67,13 @@ public class ObjectPooler : MonoBehaviour
 
         if (!poolDictionary.ContainsKey(tag))
         {
-            Debug.LogError("Pool " + tag + "doesnt exist.");
+            Debug.LogError("Pool " + tag + " doesnt exist.");
             return null;
         }
 
         GameObject obj = poolDictionary[tag].Dequeue();
 
+        obj.SetActive(false);
         obj.transform.position = pos;
         obj.transform.rotation = rot;
         obj.SetActive(true);

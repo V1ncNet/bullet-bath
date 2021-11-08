@@ -624,15 +624,15 @@ MonoBehaviour:
   - tag: Ball
     prefab: {fileID: 3831554945809490888, guid: 1a83321d6e98d2b479a84dcb53427c89,
       type: 3}
-    size: 1000
+    size: 10
   - tag: Potato
     prefab: {fileID: 3678250383542577223, guid: 775933f3f1ae4409782277fd8d13d44f,
       type: 3}
-    size: 1000
+    size: 10
   - tag: Missile
     prefab: {fileID: 7541719329792968467, guid: d8358c4b203fae9409cfbbdcaf775645,
       type: 3}
-    size: 100
+    size: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
