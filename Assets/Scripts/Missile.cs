@@ -20,7 +20,7 @@ public class Missile : MonoBehaviour
     [SerializeField] int steps = 50;
     [SerializeField] int maxWaypoints = 4;
 
-    [SerializeField] GameObject debugHelper;
+    //[SerializeField] GameObject debugHelper;
 
     float speed = 0f;
     float fuel = 3f;
@@ -143,22 +143,22 @@ public class Missile : MonoBehaviour
         return CubicCurve(bezierPoints[3 * idx], bezierPoints[3 * idx + 1], bezierPoints[3 * idx + 2], bezierPoints[3 * idx + 3], t);
     }
 
-    void DrawDebugHelper()
-    {
-        if (debugHelper == null)
-        {
-            Debug.LogError("No Debug Helper prefab.");
-            return;
-        }
+    //void DrawDebugHelper()
+    //{
+    //    if (debugHelper == null)
+    //    {
+    //        Debug.LogError("No Debug Helper prefab.");
+    //        return;
+    //    }
 
-        for (int i = 0; i < maxWaypoints; i++)
-        {
-            for (int s = 0; s < steps; s++)
-            {
-                float t = (float)s / steps;
-                GameObject g = Instantiate(debugHelper, GetCurrentTarget(i, t), Quaternion.identity);
-                Debug.Log(t);
-            }
-        }
-    }
+    //    for (int i = 0; i < maxWaypoints; i++)
+    //    {
+    //        for (int s = 0; s < steps; s++)
+    //        {
+    //            float t = (float)s / steps;
+    //            GameObject g = Instantiate(debugHelper, GetCurrentTarget(i, t), Quaternion.identity);
+    //            Debug.Log(t);
+    //        }
+    //    }
+    //}
 }
