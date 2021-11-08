@@ -6,13 +6,9 @@ public class Potato : MonoBehaviour
     public Transform weapon;
     Transform muzzle;
 
-    void Start()
-    {
-        muzzle = weapon.GetChild(1);
-    }
-
     void OnEnable()
     {
+        muzzle = weapon.GetChild(1);
         transform.rotation = Random.rotation;
         GetComponent<Rigidbody>().AddForce(muzzle.forward * startForce);
     }
