@@ -39,7 +39,7 @@ public class ControllerVR : MonoBehaviour
 
                 GameObject potato = pooler.SpawnFromPool("Potato", muzzle.transform.position, Random.rotation);
                 Rigidbody rb = potato.GetComponent<Rigidbody>();
-                rb.AddForce(Vector3.back * 5f);
+                rb.AddForce(Vector3.forward * PotatoSettings.startForce);
             }
         }
     }
