@@ -633,7 +633,6 @@ MonoBehaviour:
     prefab: {fileID: 7541719329792968467, guid: d8358c4b203fae9409cfbbdcaf775645,
       type: 3}
     size: 100
-  muzzle: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
