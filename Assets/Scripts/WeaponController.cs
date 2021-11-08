@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class ControllerVR : MonoBehaviour
+public class WeaponController : MonoBehaviour
 {
-    public Transform xrSetup;
-    public float movementSpeed = 2f;
-
     List<InputDevice> rightHandedControllers;
     ObjectPooler pooler;
     Transform muzzle;
@@ -40,16 +37,6 @@ public class ControllerVR : MonoBehaviour
 
         foreach (InputDevice rightHand in rightHandedControllers)
         {
-            //Vector2 primary2DAxisValue;
-            //if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out primary2DAxisValue) && primary2DAxisValue != Vector2.zero)
-            //{
-            //    //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-            //    //Debug.Log("Right stick " + primary2DAxisValue);
-
-            //    Vector3 dir = new Vector3(primary2DAxisValue.x, 0.0f, primary2DAxisValue.y);
-            //    xrSetup.Translate(dir.normalized * movementSpeed * Time.deltaTime);
-            //}
-
             bool triggerValue;
             if (rightHand.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
             {

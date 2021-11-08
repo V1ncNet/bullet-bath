@@ -18,13 +18,13 @@ public class Controller : MonoBehaviour
     //}
 
     ControllerDesktop desktop;
-    ControllerVR controllerVr;
+    WeaponController controllerVr;
 
     // Start is called before the first frame update
     void Start()
     {
         desktop = GetComponent<ControllerDesktop>();
-        controllerVr = GetComponent<ControllerVR>();
+        controllerVr = GetComponent<WeaponController>();
     }
 
     // Update is called once per frame
