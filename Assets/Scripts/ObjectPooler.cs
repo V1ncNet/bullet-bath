@@ -4,9 +4,9 @@ using UnityEngine;
 /*
  * script manages object pooling
  * 
- * placed on:       Game.Ground
+ * placed on:       Game.Scene_Manager
  * author:          Johannes Mueller
- * last changed:    20.09.2021
+ * last changed:    08.11.2021
  */
 
 public class ObjectPooler : MonoBehaviour
@@ -41,12 +41,17 @@ public class ObjectPooler : MonoBehaviour
         // filling each pool
         foreach (Pool pool in pools)
         {
+            // keep your hirachy organised
+            GameObject parent = new GameObject();
+            parent.name = pool.tag;
+
             Queue<GameObject> objPool = new Queue<GameObject>();
 
             // enqueuing the desired amount of objects
             for (int i = 0; i < pool.size; i++)
             {
                 GameObject obj = Instantiate(pool.prefab);
+                obj.transform.SetParent(parent.transform);
                 obj.SetActive(false);
                 objPool.Enqueue(obj);
             }
