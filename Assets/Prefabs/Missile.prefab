@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7911544407875926847}
+  - component: {fileID: -738657187534052332}
   - component: {fileID: -1305601743887279114}
   m_Layer: 0
   m_Name: Missile
@@ -32,6 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-738657187534052332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541719329792968467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc8236c399dda641b7923b1b67caf13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startForce: 0
+  fireRate: 2
 --- !u!114 &-1305601743887279114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +67,6 @@ MonoBehaviour:
   smoothness: 0.4
   steps: 50
   maxWaypoints: 4
-  debugHelper: {fileID: 0}
 --- !u!1001 &6862440688248409913
 PrefabInstance:
   m_ObjectHideFlags: 0

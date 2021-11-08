@@ -25,7 +25,7 @@ public class Missile : MonoBehaviour
     float speed = 0f;
     float fuel = 3f;
 
-    Vector3 forward;
+    //Vector3 forward;
     Vector3[] waypoints;
     Vector3[] bezierPoints;
     Vector3[] path;
@@ -82,7 +82,7 @@ public class Missile : MonoBehaviour
     void Propel()
     {
         transform.LookAt(currentTarget);
-        speed = Mathf.Min(speed + acceleration * acceleration * Time.deltaTime, maxSpeed);
+        speed = Mathf.Min(speed + acceleration * Time.deltaTime, maxSpeed);
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
         fuel -= Time.deltaTime;
     }

@@ -13,6 +13,8 @@ public class ControllerVR : MonoBehaviour
     Transform muzzle;
 
     int poolIndex = 0;
+
+    float cooldown = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -34,32 +36,39 @@ public class ControllerVR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cooldown -= Time.deltaTime;
+
         foreach (InputDevice rightHand in rightHandedControllers)
         {
-            Vector2 primary2DAxisValue;
-            if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out primary2DAxisValue) && primary2DAxisValue != Vector2.zero)
-            {
-                Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-                Debug.Log("Right stick " + primary2DAxisValue);
+            //Vector2 primary2DAxisValue;
+            //if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out primary2DAxisValue) && primary2DAxisValue != Vector2.zero)
+            //{
+            //    //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
+            //    //Debug.Log("Right stick " + primary2DAxisValue);
 
-                Vector3 dir = new Vector3(primary2DAxisValue.x, 0.0f, primary2DAxisValue.y);
-                xrSetup.Translate(dir.normalized * movementSpeed * Time.deltaTime);
-            }
+            //    Vector3 dir = new Vector3(primary2DAxisValue.x, 0.0f, primary2DAxisValue.y);
+            //    xrSetup.Translate(dir.normalized * movementSpeed * Time.deltaTime);
+            //}
 
             bool triggerValue;
             if (rightHand.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
             {
-                Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-                Debug.Log("Trigger button is pressed.");
+                //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
+                //Debug.Log("Trigger button is pressed.");
 
-                pooler.SpawnFromPool(pooler.pools[poolIndex].tag, muzzle.transform.position, Quaternion.identity);
+                if (cooldown <= .0f)
+                {
+                    GameObject go = pooler.SpawnFromPool(pooler.pools[poolIndex].tag, muzzle.position, muzzle.rotation);
+                    Projectile projectile = go.GetComponent<Projectile>();
+                    cooldown = 1 / projectile.fireRate;
+                }
             }
 
             bool primaryButtonValue;
             if (rightHand.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonValue) && primaryButtonValue)
             {
-                Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-                Debug.Log("A button is pressed.");
+                //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
+                //Debug.Log("A button is pressed.");
 
                 poolIndex--;
                 if (poolIndex < 0)
@@ -71,8 +80,8 @@ public class ControllerVR : MonoBehaviour
             bool secondaryButtonValue;
             if (rightHand.TryGetFeatureValue(CommonUsages.secondaryButton, out secondaryButtonValue) && secondaryButtonValue)
             {
-                Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-                Debug.Log("B button is pressed.");
+                //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
+                //Debug.Log("B button is pressed.");
 
                 poolIndex++;
                 if (poolIndex >= pooler.pools.Count)

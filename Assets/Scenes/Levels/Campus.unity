@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249614291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1725982594}
@@ -624,11 +624,11 @@ MonoBehaviour:
   - tag: Ball
     prefab: {fileID: 3831554945809490888, guid: 1a83321d6e98d2b479a84dcb53427c89,
       type: 3}
-    size: 10000
+    size: 1000
   - tag: Potato
     prefab: {fileID: 3678250383542577223, guid: 775933f3f1ae4409782277fd8d13d44f,
       type: 3}
-    size: 10000
+    size: 1000
   - tag: Missile
     prefab: {fileID: 7541719329792968467, guid: d8358c4b203fae9409cfbbdcaf775645,
       type: 3}
@@ -708,7 +708,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 8.4e-43, y: 7.1e-44, z: 0, w: -0.000000022594648}
+  m_BoundingSphereOverride: {x: 4.5904e-41, y: 5.998023e+17, z: 4.5904e-41, w: 9.403955e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

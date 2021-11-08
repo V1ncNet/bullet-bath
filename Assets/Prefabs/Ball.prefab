@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8463404246921251406}
   - component: {fileID: 5250557701292933331}
   - component: {fileID: 8613775665952339857}
+  - component: {fileID: 4974056789862495450}
   - component: {fileID: 7392307743788241702}
   m_Layer: 0
   m_Name: Ball
@@ -113,6 +114,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4974056789862495450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831554945809490888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc8236c399dda641b7923b1b67caf13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startForce: 500
+  fireRate: 5
 --- !u!114 &7392307743788241702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,5 +140,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7685a622120731a488e078540d934480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startForce: 500
-  weapon: {fileID: 449024967538659485, guid: cba0ac5d78fb6426da4fc2ae55dbcfc2, type: 3}
