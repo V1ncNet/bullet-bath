@@ -5,7 +5,7 @@ using UnityEngine;
  * 
  * placed on:       Prefab.Missile
  * author:          Johannes Mueller
- * last changed:    22.09.2021
+ * last changed:    08.11.2021
  */
 
 public class Missile : MonoBehaviour
@@ -33,10 +33,6 @@ public class Missile : MonoBehaviour
     int step = 0;
 
     Vector3 currentTarget;
-
-    void Start()
-    {
-    }
 
     void OnEnable()
     {
@@ -149,6 +145,12 @@ public class Missile : MonoBehaviour
 
     void DrawDebugHelper()
     {
+        if (debugHelper == null)
+        {
+            Debug.LogError("No Debug Helper prefab.");
+            return;
+        }
+
         for (int i = 0; i < maxWaypoints; i++)
         {
             for (int s = 0; s < steps; s++)
