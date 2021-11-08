@@ -432,7 +432,7 @@ SphereCollider:
   m_GameObject: {fileID: 541096545}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.04
   m_Center: {x: 0, y: 0.055, z: 0.07}
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 599916903}
   - component: {fileID: 599916902}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,7 +462,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599916901}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 06f5d6bf7420fe543be3e19f24213858, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -579,7 +579,7 @@ MonoBehaviour:
   - tag: Potato
     prefab: {fileID: 3678250383542577223, guid: 775933f3f1ae4409782277fd8d13d44f,
       type: 3}
-    size: 1000
+    size: 10000
   - tag: GarbageCan
     prefab: {fileID: 2837917711737556388, guid: 602ef68a4ef294599a74f365a19d6d5f,
       type: 3}
