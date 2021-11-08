@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1298197094274549739}
   m_Layer: 0
   m_Name: Potato.001
-  m_TagString: Untagged
+  m_TagString: PhysicObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

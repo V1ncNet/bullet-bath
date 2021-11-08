@@ -63,6 +63,8 @@ MonoBehaviour:
   acceleration: 5
   maxFuel: 3
   range: 40
+  explosionForce: 1000
+  explosionRadius: 8
   explosionEffect: {fileID: 6724781765298441096, guid: 61e515187f1becf4fa5a8374acfa5eab,
     type: 3}
   deviation: 0.5

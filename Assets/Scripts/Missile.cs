@@ -10,16 +10,18 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour
 {
-    [SerializeField] float maxSpeed = 50f;
-    [SerializeField] float acceleration = 5f;
-    [SerializeField] float maxFuel = 3f;
-    [SerializeField] float range = 40f;
-    [SerializeField] GameObject explosionEffect;
+    public float maxSpeed = 50f;
+    public float acceleration = 5f;
+    public float maxFuel = 3f;
+    public float range = 40f;
+    public float explosionForce = 50f;
+    public float explosionRadius = 5f;
+    public GameObject explosionEffect;
 
-    [SerializeField] float deviation = .5f;
-    [SerializeField] float smoothness = .4f;
-    [SerializeField] int steps = 50;
-    [SerializeField] int maxWaypoints = 4;
+    public float deviation = .5f;
+    public float smoothness = .4f;
+    public int steps = 50;
+    public int maxWaypoints = 4;
 
     //[SerializeField] GameObject debugHelper;
 
@@ -91,6 +93,16 @@ public class Missile : MonoBehaviour
     void Explode()
     {
         Destroy(Instantiate(explosionEffect, transform.position, Quaternion.identity), 5);
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.CompareTag("PhysicObject"))
+            {
+                Rigidbody rb = collider.GetComponent<Rigidbody>();
+                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+            }
+        }
         gameObject.SetActive(false);
     }
 
