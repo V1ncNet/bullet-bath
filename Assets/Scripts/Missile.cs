@@ -14,6 +14,7 @@ public class Missile : MonoBehaviour
     [SerializeField] float acceleration = 5f;
     [SerializeField] float maxFuel = 3f;
     [SerializeField] float range = 40f;
+    [SerializeField] GameObject explosionEffect;
 
     [SerializeField] float deviation = .5f;
     [SerializeField] float smoothness = .4f;
@@ -50,7 +51,7 @@ public class Missile : MonoBehaviour
 
     void Update()
     {
-        if (fuel <= 0f || transform.position.y <= .25f)
+        if (fuel <= 0f || transform.position.y <= .1f)
         {
             Explode();
             return;
@@ -89,7 +90,7 @@ public class Missile : MonoBehaviour
 
     void Explode()
     {
-        Debug.Log("BOOM!");
+        Destroy(Instantiate(explosionEffect, transform.position, Quaternion.identity), 5);
         gameObject.SetActive(false);
     }
 

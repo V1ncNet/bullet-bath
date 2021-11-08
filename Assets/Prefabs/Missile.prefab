@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startForce: 0
-  fireRate: 2
+  fireRate: 4
 --- !u!114 &-1305601743887279114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +63,8 @@ MonoBehaviour:
   acceleration: 5
   maxFuel: 3
   range: 40
+  explosionEffect: {fileID: 6724781765298441096, guid: 61e515187f1becf4fa5a8374acfa5eab,
+    type: 3}
   deviation: 0.5
   smoothness: 0.4
   steps: 50

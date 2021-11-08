@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startForce: 500
-  fireRate: 5
+  fireRate: 8
 --- !u!114 &7392307743788241702
 MonoBehaviour:
   m_ObjectHideFlags: 0
