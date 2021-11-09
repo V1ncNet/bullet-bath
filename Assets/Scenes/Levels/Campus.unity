@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 4034.5938, g: 2803.1895, b: 2576.3047, a: 1}
+  m_IndirectSpecularColor: {r: 368.25, g: 368.25, b: 368.25, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4733,7 +4733,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 6e-45, z: 3.12e-42, w: 1.02e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -11838,6 +11838,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8262629227974423360, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
     - target: {fileID: -6237453326207612327, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -11848,21 +11853,66 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.32
       objectReference: {fileID: 0}
+    - target: {fileID: -4731389181910098207, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
+    - target: {fileID: -4606126739962608462, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
+    - target: {fileID: -3826285035607841729, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
+    - target: {fileID: -2643623232658015389, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
     - target: {fileID: -887176540849637260, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
         type: 3}
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -887176540849637260, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
+    - target: {fileID: -270170144239090567, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
     - target: {fileID: 919132149155446097, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
         type: 3}
       propertyPath: m_Name
       value: Campus
       objectReference: {fileID: 0}
+    - target: {fileID: 1568390416797410679, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
     - target: {fileID: 2581826581719653175, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
         type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2827080162807993078, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
+    - target: {fileID: 7293931196208361921, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8a6be62fc58f384ca7644582a1c9275, type: 2}
     - target: {fileID: 8993965652175754820, guid: ba04600487af4dc4c8f47b4f3fdd6e8b,
         type: 3}
       propertyPath: m_CastShadows
