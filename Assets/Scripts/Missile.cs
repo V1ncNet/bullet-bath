@@ -5,7 +5,7 @@ using UnityEngine;
  * 
  * placed on:       Prefab.Missile
  * author:          Johannes Mueller
- * last changed:    08.11.2021
+ * last changed:    09.11.2021
  */
 
 public class Missile : MonoBehaviour
@@ -28,8 +28,7 @@ public class Missile : MonoBehaviour
 
     float speed = 0f;
     float fuel = 3f;
-
-    //Vector3 forward;
+    
     Vector3[] waypoints;
     Vector3[] bezierPoints;
     Vector3[] path;
@@ -54,7 +53,7 @@ public class Missile : MonoBehaviour
 
     void Update()
     {
-        if (fuel <= 0f || transform.position.y <= minHeight)
+        if (fuel <= 0f)
         {
             Explode();
             return;
@@ -78,7 +77,6 @@ public class Missile : MonoBehaviour
                 currentTarget = GetCurrentTarget(index, (float)step / steps);
                 //Debug.Log(currentTarget);
             }
-
         }
         Propel();
     }
@@ -89,6 +87,12 @@ public class Missile : MonoBehaviour
         speed = Mathf.Min(speed + acceleration * Time.deltaTime, maxSpeed);
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
         fuel -= Time.deltaTime;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject);
+        Explode();
     }
 
     void Explode()
