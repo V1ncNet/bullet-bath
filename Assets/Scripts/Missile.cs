@@ -14,6 +14,7 @@ public class Missile : MonoBehaviour
     public float acceleration = 5f;
     public float maxFuel = 3f;
     public float range = 40f;
+    public float minHeight = 0f;
     public float explosionForce = 50f;
     public float explosionRadius = 5f;
     public GameObject explosionEffect;
@@ -53,7 +54,7 @@ public class Missile : MonoBehaviour
 
     void Update()
     {
-        if (fuel <= 0f || transform.position.y <= .1f)
+        if (fuel <= 0f || transform.position.y <= minHeight)
         {
             Explode();
             return;
