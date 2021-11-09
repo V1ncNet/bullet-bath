@@ -10,8 +10,9 @@ public class WeaponController : MonoBehaviour
     Transform muzzle;
 
     int poolIndex = 0;
-
     float cooldown = 0;
+    bool isA, wasA;
+    bool isB, wasB;
     
     // Start is called before the first frame update
     void Start()
@@ -57,12 +58,21 @@ public class WeaponController : MonoBehaviour
                 //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
                 //Debug.Log("A button is pressed.");
 
-                poolIndex--;
-                if (poolIndex < 0)
+                isA = true;
+                if (isA != wasA)
                 {
-                    poolIndex = pooler.pools.Count;
+                    poolIndex--;
+                    if (poolIndex < 0)
+                    {
+                        poolIndex = pooler.pools.Count -1;
+                    }
                 }
             }
+            else
+            {
+                isA = false;
+            }
+            wasA = isA;
 
             bool secondaryButtonValue;
             if (rightHand.TryGetFeatureValue(CommonUsages.secondaryButton, out secondaryButtonValue) && secondaryButtonValue)
@@ -70,12 +80,21 @@ public class WeaponController : MonoBehaviour
                 //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
                 //Debug.Log("B button is pressed.");
 
-                poolIndex++;
-                if (poolIndex >= pooler.pools.Count)
+                isB = true;
+                if (isB != wasB)
                 {
-                    poolIndex = 0;
+                    poolIndex++;
+                    if (poolIndex >= pooler.pools.Count)
+                    {
+                        poolIndex = 0;
+                    }
                 }
             }
+            else
+            {
+                isB = false;
+            }
+            wasB = isB;
         }
     }
 }
