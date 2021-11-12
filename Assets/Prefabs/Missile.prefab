@@ -65,15 +65,14 @@ MonoBehaviour:
   acceleration: 5
   maxFuel: 3
   range: 40
-  minHeight: 0
   explosionForce: 1000
   explosionRadius: 8
   explosionEffect: {fileID: 6724781765298441096, guid: 61e515187f1becf4fa5a8374acfa5eab,
     type: 3}
-  deviation: 0.5
+  deviation: 1
   smoothness: 0.4
   steps: 50
-  maxWaypoints: 4
+  maxWaypoints: 10
 --- !u!136 &2761717561047388199
 CapsuleCollider:
   m_ObjectHideFlags: 0

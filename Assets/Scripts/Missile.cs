@@ -1,7 +1,7 @@
 using UnityEngine;
 
-/*
- * script controls missiles
+/* script controls missiles
+ * makes the missile fly in a cartoonish curve
  * 
  * placed on:       Prefab.Missile
  * author:          Johannes Mueller
@@ -12,16 +12,23 @@ public class Missile : MonoBehaviour
 {
     public float maxSpeed = 50f;
     public float acceleration = 5f;
+    [Tooltip("How long the fuel lasts in seconds")]
     public float maxFuel = 3f;
+    [Tooltip("Distance to the last calculated waypoint")]
     public float range = 40f;
-    public float minHeight = 0f;
     public float explosionForce = 50f;
     public float explosionRadius = 5f;
     public GameObject explosionEffect;
-
+    [Tooltip("How far the missile deviated from the direct path")]
+    [Range(0.1f,2)]
     public float deviation = .5f;
+    [Tooltip("Sets the first and last waypoint closer to the beginning and end of the path respectevly. Smoothens the projectile's behavior at the beginning and the end. The heigher the smoother, but also less chaotic randomness.")]
+    [Range(0.01f, 1)]
     public float smoothness = .4f;
+    [Tooltip("Resolution of the interpolation: Higher values give better results at the cost of performance.")]
     public int steps = 50;
+    [Tooltip("How many random waypoints are generated along the path.")]
+    [Range(1,10)]
     public int maxWaypoints = 4;
 
     //[SerializeField] GameObject debugHelper;
@@ -113,13 +120,12 @@ public class Missile : MonoBehaviour
 
     void CreateWaypoints()
     {
-        if (maxWaypoints < 1) maxWaypoints = 1;
         int interval = (int)(range / maxWaypoints + .5f);
         waypoints = new Vector3[maxWaypoints + 1];
         waypoints[0] = transform.position;
         for (int i = 1; i < maxWaypoints; i++)
         {
-            waypoints[i] = transform.position + i * interval * transform.forward + UnityEngine.Random.insideUnitSphere * deviation;
+            waypoints[i] = transform.position + i * interval * transform.forward + Random.insideUnitSphere * deviation;
         }
     }
 
@@ -163,6 +169,7 @@ public class Missile : MonoBehaviour
 
     //void DrawDebugHelper()
     //{
+    //    // used for designing this script, left for documentation
     //    if (debugHelper == null)
     //    {
     //        Debug.LogError("No Debug Helper prefab.");
