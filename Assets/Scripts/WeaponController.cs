@@ -38,11 +38,12 @@ public class WeaponController : MonoBehaviour
 
         foreach (InputDevice rightHand in rightHandedControllers)
         {
-            bool triggerValue;
-            if (rightHand.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
+            Debug.Log(rightHandedControllers.Count);
+
+            if (rightHand.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue) && triggerValue)
             {
                 //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-                //Debug.Log("Trigger button is pressed.");
+                Debug.Log("Trigger button is pressed.");
 
                 if (cooldown <= .0f)
                 {
@@ -52,11 +53,10 @@ public class WeaponController : MonoBehaviour
                 }
             }
 
-            bool primaryButtonValue;
-            if (rightHand.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonValue) && primaryButtonValue)
+            if (rightHand.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue) && primaryButtonValue)
             {
                 //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-                //Debug.Log("A button is pressed.");
+                Debug.Log("A button is pressed.");
 
                 isA = true;
                 if (isA != wasA)
@@ -64,7 +64,7 @@ public class WeaponController : MonoBehaviour
                     poolIndex--;
                     if (poolIndex < 0)
                     {
-                        poolIndex = pooler.pools.Count -1;
+                        poolIndex = pooler.pools.Count - 1;
                     }
                 }
             }
@@ -74,11 +74,10 @@ public class WeaponController : MonoBehaviour
             }
             wasA = isA;
 
-            bool secondaryButtonValue;
-            if (rightHand.TryGetFeatureValue(CommonUsages.secondaryButton, out secondaryButtonValue) && secondaryButtonValue)
+            if (rightHand.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButtonValue) && secondaryButtonValue)
             {
                 //Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", rightHand.name, rightHand.characteristics.ToString()));
-                //Debug.Log("B button is pressed.");
+                Debug.Log("B button is pressed.");
 
                 isB = true;
                 if (isB != wasB)
