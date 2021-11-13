@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc8236c399dda641b7923b1b67caf13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startForce: 500
+  startForce: 1300
   fireRate: 8
 --- !u!114 &7392307743788241702
 MonoBehaviour:
