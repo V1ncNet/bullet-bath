@@ -58,6 +58,7 @@ public class Movement : MonoBehaviour
 
     bool IsGrounded()
     {
+        // sphere cast so we dont slip of edges
         Vector3 rayStart = transform.TransformPoint(character.center);
         float rayLength = character.center.y + 0.01f;
         return Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit hit, rayLength, groundLayer);

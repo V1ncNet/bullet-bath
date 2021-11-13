@@ -41,7 +41,7 @@ public class ObjectPooler : MonoBehaviour
         // filling each pool
         foreach (Pool pool in pools)
         {
-            // keep your hirachy organised
+            // keep your hirachy clean
             GameObject parent = new GameObject();
             parent.name = pool.tag;
 
