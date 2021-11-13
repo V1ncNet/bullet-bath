@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR;
 
 public class WeaponController : MonoBehaviour
 {
+    public Text currentProjectileText;
+
     List<InputDevice> rightHandedControllers;
     ObjectPooler pooler;
     Transform muzzle;
@@ -61,11 +64,7 @@ public class WeaponController : MonoBehaviour
                 isA = true;
                 if (isA != wasA)
                 {
-                    poolIndex--;
-                    if (poolIndex < 0)
-                    {
-                        poolIndex = pooler.pools.Count - 1;
-                    }
+                    PreviousButton();
                 }
             }
             else
@@ -82,11 +81,7 @@ public class WeaponController : MonoBehaviour
                 isB = true;
                 if (isB != wasB)
                 {
-                    poolIndex++;
-                    if (poolIndex >= pooler.pools.Count)
-                    {
-                        poolIndex = 0;
-                    }
+                    NextButton();
                 }
             }
             else
@@ -95,5 +90,25 @@ public class WeaponController : MonoBehaviour
             }
             wasB = isB;
         }
+    }
+
+    public void NextButton()
+    {
+        poolIndex++;
+        if (poolIndex >= pooler.pools.Count)
+        {
+            poolIndex = 0;
+        }
+        currentProjectileText.text = pooler.pools[poolIndex].tag;
+    }
+
+    public void PreviousButton()
+    {
+        poolIndex--;
+        if (poolIndex < 0)
+        {
+            poolIndex = pooler.pools.Count - 1;
+        }
+        currentProjectileText.text = pooler.pools[poolIndex].tag;
     }
 }
