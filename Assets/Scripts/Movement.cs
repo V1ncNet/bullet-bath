@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -19,10 +16,18 @@ public class Movement : MonoBehaviour
     CharacterController character;
     Vector2 primary2DAxisValue;
 
+    GameObject weaponUI;
+    bool uiActve = false;
+
+    bool isPressed, wasPressed = false;
+
     void Start()
     {
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
+
+        weaponUI = ProjectileManager.proManager.weaponUI;
+        weaponUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,7 +35,22 @@ public class Movement : MonoBehaviour
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(source);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out primary2DAxisValue);
-    }
+
+        if (device.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButton) && primaryButton)
+        {
+            isPressed = true;
+            if (isPressed != wasPressed)
+            {
+                uiActve = !uiActve;
+                weaponUI.SetActive(uiActve);
+            }
+        }
+        else
+        {
+            isPressed = false;
+        }
+        wasPressed = isPressed;
+    }            
 
     void FixedUpdate()
     {

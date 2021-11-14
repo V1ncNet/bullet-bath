@@ -34,7 +34,8 @@ public class ProjectileManager : MonoBehaviour
         }
         proManager = this;
     }
-
+    
+    public GameObject weaponUI;
     //pools and projectiles might be merged in a future version
     [Tooltip("Projectiles order should match the respected pools order")]
     public List<Projectile> projectiles;
