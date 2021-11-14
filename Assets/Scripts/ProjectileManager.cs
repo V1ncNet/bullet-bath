@@ -14,6 +14,9 @@ public class ProjectileManager : MonoBehaviour
         [HideInInspector]
         public int fireRate;
         public int maxFireRate;
+
+        public int curFRStep = 1;
+        public int curPoStep = 1;
     }
 
     public static ProjectileManager proManager;
@@ -38,8 +41,6 @@ public class ProjectileManager : MonoBehaviour
     Projectile currentProjectile;
     Image FRButtonImage;
     Image PoButtonImage;
-    int curFRStep = 1;
-    int curPoStep = 1;
 
     void Start()
     {
@@ -58,29 +59,36 @@ public class ProjectileManager : MonoBehaviour
     public void ChangeFireRate()
     {
         Debug.Log("firerate button");
-        curFRStep++;
-        if (curFRStep > buttonLevels.Length)
+        currentProjectile.curFRStep++;
+        if (currentProjectile.curFRStep > buttonLevels.Length)
         {
-            curFRStep = 1;
+            currentProjectile.curFRStep = 1;
         }
-        currentProjectile.fireRate = currentProjectile.maxFireRate * curFRStep / buttonLevels.Length;
-        FRButtonImage.sprite = buttonLevels[curFRStep - 1];
+        currentProjectile.fireRate = currentProjectile.maxFireRate * currentProjectile.curFRStep / buttonLevels.Length;
+        FRButtonImage.sprite = buttonLevels[currentProjectile.curFRStep - 1];
     }
 
     public void ChangePower()
     {
         Debug.Log("power button");
-        curPoStep++;
-        if (curPoStep > buttonLevels.Length)
+        currentProjectile.curPoStep++;
+        if (currentProjectile.curPoStep > buttonLevels.Length)
         {
-            curPoStep = 1;
+            currentProjectile.curPoStep = 1;
         }
-        currentProjectile.power = currentProjectile.maxPower * curPoStep / buttonLevels.Length;
-        PoButtonImage.sprite = buttonLevels[curPoStep - 1];
+        currentProjectile.power = currentProjectile.maxPower * currentProjectile.curPoStep / buttonLevels.Length;
+        PoButtonImage.sprite = buttonLevels[currentProjectile.curPoStep - 1];
+    }
+
+    void UpdateUI()
+    {
+        FRButtonImage.sprite = buttonLevels[currentProjectile.curFRStep - 1];
+        PoButtonImage.sprite = buttonLevels[currentProjectile.curPoStep - 1];
     }
 
     public void SetProjectile(int index)
     {
         currentProjectile = projectiles[index];
+        UpdateUI();
     }
 }
