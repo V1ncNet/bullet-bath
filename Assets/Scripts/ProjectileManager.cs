@@ -39,9 +39,13 @@ public class ProjectileManager : MonoBehaviour
     //pools and projectiles might be merged in a future version
     [Tooltip("Projectiles order should match the respected pools order")]
     public List<Projectile> projectiles;
-    public GameObject FireRateButton;
-    public GameObject PowerButton;
+    public GameObject fireRateButton;
+    public GameObject powerButton;
+    public GameObject sizeButton;
     public Sprite[] buttonLevels;
+    public Sprite sizeButtonActive;
+    public Sprite sizeButtonInactive;
+
     [Range(1,10)]
     public float maxProjectileSize = 10;
     [Range(0.001f, 1)]
@@ -52,6 +56,7 @@ public class ProjectileManager : MonoBehaviour
     Projectile currentProjectile;
     Image FRButtonImage;
     Image PoButtonImage;
+    Image SizeButtonImage;
 
     void Start()
     {
@@ -61,8 +66,9 @@ public class ProjectileManager : MonoBehaviour
             projectile.power = projectile.maxPower / buttonLevels.Length;
         }
         currentProjectile = projectiles[0];
-        FRButtonImage = FireRateButton.GetComponent<Image>();
-        PoButtonImage = PowerButton.GetComponent<Image>();
+        FRButtonImage = fireRateButton.GetComponent<Image>();
+        PoButtonImage = powerButton.GetComponent<Image>();
+        SizeButtonImage = sizeButton.GetComponent<Image>();
     }
 
     // the following might scale very bad but it is kept simple for the sake of the project's deadline
@@ -106,5 +112,9 @@ public class ProjectileManager : MonoBehaviour
     public void RandomSize()
     {
         randomiseSize = !randomiseSize;
+        if (randomiseSize)
+            SizeButtonImage.sprite = sizeButtonActive;
+        else
+            SizeButtonImage.sprite = sizeButtonInactive;
     }
 }

@@ -7161,14 +7161,17 @@ MonoBehaviour:
     curFRStep: 1
     curPoStep: 1
     originialSize: {x: 0, y: 0, z: 0}
-  FireRateButton: {fileID: 675611020}
-  PowerButton: {fileID: 1015089743}
+  fireRateButton: {fileID: 675611020}
+  powerButton: {fileID: 1015089743}
+  sizeButton: {fileID: 1357918156}
   buttonLevels:
   - {fileID: 21300000, guid: c4bd2feb201fb1541a477f3b31bf7262, type: 3}
   - {fileID: 21300000, guid: 18f4d83257cda8745b514a7b79fc371c, type: 3}
   - {fileID: 21300000, guid: 31d911a90c844b34da24476a7c386398, type: 3}
   - {fileID: 21300000, guid: b5cd482814678ed48a78ddb4d7d55080, type: 3}
   - {fileID: 21300000, guid: e1a37436f0cc48045acca1e1cd26da2b, type: 3}
+  sizeButtonActive: {fileID: 21300000, guid: 4ddd6fee7c08ecf4897469ea562bfa42, type: 3}
+  sizeButtonInactive: {fileID: 21300000, guid: 49cf408b60825694bb79b863aa3abc96, type: 3}
   maxProjectileSize: 10
   minProjectileSize: 0.2
   randomiseSize: 0
@@ -14964,7 +14967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5ff6ec5bbdd00ae44bd860bd9d537524, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49cf408b60825694bb79b863aa3abc96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
