@@ -107,8 +107,6 @@ public class Missile : MonoBehaviour
 
     void Explode()
     {
-        Destroy(Instantiate(explosionEffect, transform.position, Quaternion.identity), 5);
-
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in colliders)
         {
@@ -119,6 +117,13 @@ public class Missile : MonoBehaviour
             }
         }
         gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        GameObject effect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        Debug.Log(effect);
+        Destroy(effect, 1);
     }
 
     void CreateWaypoints()

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7578450907593489165}
   - component: {fileID: 201557051175905538}
   - component: {fileID: 201557051175905539}
-  - component: {fileID: -6746717978185583570}
   - component: {fileID: -1298197094274549739}
   m_Layer: 0
   m_Name: Potato.001
@@ -115,20 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-6746717978185583570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3678250383542577223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecc8236c399dda641b7923b1b67caf13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startForce: 1900
-  fireRate: 250
 --- !u!114 &-1298197094274549739
 MonoBehaviour:
   m_ObjectHideFlags: 0
