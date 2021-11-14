@@ -75,7 +75,7 @@ public class ProjectileManager : MonoBehaviour
         {
             curPoStep = 1;
         }
-        currentProjectile.fireRate = currentProjectile.maxPower * curPoStep / buttonLevels.Length;
+        currentProjectile.power = currentProjectile.maxPower * curPoStep / buttonLevels.Length;
         PoButtonImage.sprite = buttonLevels[curPoStep - 1];
     }
 

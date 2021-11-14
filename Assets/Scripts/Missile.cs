@@ -51,6 +51,9 @@ public class Missile : MonoBehaviour
         index = 0;
         step = 0;
 
+        // for ui control.... hardcoded index
+        explosionForce = ProjectileManager.proManager.projectiles[2].power;
+
         CreateWaypoints();
         CreateBezierPoints();
         //DrawDebugHelper();
