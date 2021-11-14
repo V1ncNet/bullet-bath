@@ -4035,7 +4035,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 675611023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 695544741}
+        m_TargetAssemblyTypeName: ProjectileManager, Assembly-CSharp
+        m_MethodName: ChangeFireRate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &675611023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4144,27 +4156,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectiles:
-  - tag: Ball
-    power: 0
-    minPower: 200
+  - power: 0
     maxPower: 1000
     fireRate: 0
-    minFireRate: 1
     maxFireRate: 20
-  - tag: Potato
-    power: 0
-    minPower: 400
+    curFRStep: 1
+    curPoStep: 1
+  - power: 0
     maxPower: 2000
     fireRate: 0
-    minFireRate: 1
     maxFireRate: 20
-  - tag: Missile
-    power: 0
-    minPower: 500
+    curFRStep: 1
+    curPoStep: 1
+  - power: 0
     maxPower: 2500
     fireRate: 0
-    minFireRate: 1
     maxFireRate: 5
+    curFRStep: 1
+    curPoStep: 1
   FireRateButton: {fileID: 675611020}
   PowerButton: {fileID: 1015089743}
   buttonLevels:
@@ -6442,7 +6451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1015089746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 695544741}
+        m_TargetAssemblyTypeName: ProjectileManager, Assembly-CSharp
+        m_MethodName: ChangePower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1015089746
 MonoBehaviour:
   m_ObjectHideFlags: 0
