@@ -2045,6 +2045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!1 &193045563
@@ -3339,6 +3344,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Cans '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
@@ -4640,6 +4650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!4 &455270978 stripped
@@ -4921,6 +4936,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GarbageCan
       objectReference: {fileID: 0}
+    - target: {fileID: 2837917711737556388, guid: 602ef68a4ef294599a74f365a19d6d5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     - target: {fileID: 8338243637650782530, guid: 602ef68a4ef294599a74f365a19d6d5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -5056,6 +5076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cans  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
@@ -5913,6 +5938,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GarbageCan (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2837917711737556388, guid: 602ef68a4ef294599a74f365a19d6d5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     - target: {fileID: 8338243637650782530, guid: 602ef68a4ef294599a74f365a19d6d5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -6240,6 +6270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GarbageCan (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2837917711737556388, guid: 602ef68a4ef294599a74f365a19d6d5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     - target: {fileID: 8338243637650782530, guid: 602ef68a4ef294599a74f365a19d6d5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -6369,6 +6404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cans  (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
@@ -7505,6 +7545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
@@ -11188,6 +11233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!1001 &1026419919
@@ -13799,6 +13849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!1001 &1245838788
@@ -14485,6 +14540,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cans  (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
 --- !u!4 &1302190689 stripped
@@ -15067,6 +15127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!1001 &1359468036
@@ -15309,6 +15374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cans  (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
@@ -16151,6 +16221,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cans  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
 --- !u!1 &1409953568 stripped
@@ -16840,6 +16915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!114 &1479329734 stripped
@@ -17332,6 +17412,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!4 &1522040178 stripped
@@ -17594,6 +17679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GarbageCan (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837917711737556388, guid: 602ef68a4ef294599a74f365a19d6d5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
       objectReference: {fileID: 0}
     - target: {fileID: 8338243637650782530, guid: 602ef68a4ef294599a74f365a19d6d5f,
         type: 3}
@@ -18126,6 +18216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cans  (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
@@ -19072,6 +19167,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cans  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
 --- !u!1 &1652613003
@@ -19852,6 +19952,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cans  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
 --- !u!4 &1714694092 stripped
@@ -20045,6 +20150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GarbageCan (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837917711737556388, guid: 602ef68a4ef294599a74f365a19d6d5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
       objectReference: {fileID: 0}
     - target: {fileID: 8338243637650782530, guid: 602ef68a4ef294599a74f365a19d6d5f,
         type: 3}
@@ -20770,7 +20880,7 @@ LineRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a7cb6729f8620e146b5a3a4fc5c1b260, type: 2}
+  - {fileID: 2100000, guid: 5a3ef9a0ba8c81640b6b45fb80ecfe20, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20962,6 +21072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
@@ -21173,6 +21288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cans  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057420342354463036, guid: a381e9c402a1daf4795d75ba186f36e8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a381e9c402a1daf4795d75ba186f36e8, type: 3}
@@ -22679,6 +22799,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!4 &1877042175 stripped
@@ -22864,6 +22989,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
@@ -25279,6 +25409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
 --- !u!1 &2140508929
@@ -25647,6 +25782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403581687027340588, guid: 8da90f2614aee1047ba07c4e0939df58,
+        type: 3}
+      propertyPath: m_TagString
+      value: PhysicObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da90f2614aee1047ba07c4e0939df58, type: 3}
