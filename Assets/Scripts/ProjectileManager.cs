@@ -15,8 +15,12 @@ public class ProjectileManager : MonoBehaviour
         public int fireRate;
         public int maxFireRate;
 
+        [HideInInspector]
         public int curFRStep = 1;
+        [HideInInspector]
         public int curPoStep = 1;
+        [HideInInspector]
+        public Vector3 originialSize;
     }
 
     public static ProjectileManager proManager;
@@ -37,6 +41,12 @@ public class ProjectileManager : MonoBehaviour
     public GameObject FireRateButton;
     public GameObject PowerButton;
     public Sprite[] buttonLevels;
+    [Range(1,10)]
+    public float maxProjectileSize = 10;
+    [Range(0.001f, 1)]
+    public float minProjectileSize = 0.5f;
+    [HideInInspector]
+    public bool randomiseSize = false;
 
     Projectile currentProjectile;
     Image FRButtonImage;
@@ -90,5 +100,10 @@ public class ProjectileManager : MonoBehaviour
     {
         currentProjectile = projectiles[index];
         UpdateUI();
+    }
+
+    public void RandomSize()
+    {
+        randomiseSize = !randomiseSize;
     }
 }

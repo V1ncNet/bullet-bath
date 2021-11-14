@@ -28,8 +28,6 @@ public class WeaponController : MonoBehaviour
         pooler = ObjectPooler.instance;
         pm = ProjectileManager.proManager;
 
-        Debug.Log(pm.projectiles[0].fireRate);
-
         muzzle = transform.GetChild(1);
         if (muzzle == null)
         {
@@ -55,6 +53,8 @@ public class WeaponController : MonoBehaviour
                 if (cooldown <= .0f)
                 {
                     GameObject go = pooler.SpawnFromPool(pooler.pools[poolIndex].tag, muzzle.position, muzzle.rotation);
+                    if (pm.randomiseSize)
+                        go.transform.localScale = pooler.pools[poolIndex].prefab.transform.localScale * (Random.value + pm.minProjectileSize) * pm.maxProjectileSize;
                     int fr = pm.projectiles[poolIndex].fireRate;
                     if (fr <= 0)
                     {

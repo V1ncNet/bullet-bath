@@ -4162,18 +4162,21 @@ MonoBehaviour:
     maxFireRate: 20
     curFRStep: 1
     curPoStep: 1
+    originialSize: {x: 0, y: 0, z: 0}
   - power: 0
     maxPower: 2000
     fireRate: 0
     maxFireRate: 20
     curFRStep: 1
     curPoStep: 1
+    originialSize: {x: 0, y: 0, z: 0}
   - power: 0
     maxPower: 2500
     fireRate: 0
     maxFireRate: 5
     curFRStep: 1
     curPoStep: 1
+    originialSize: {x: 0, y: 0, z: 0}
   FireRateButton: {fileID: 675611020}
   PowerButton: {fileID: 1015089743}
   buttonLevels:
@@ -4182,6 +4185,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31d911a90c844b34da24476a7c386398, type: 3}
   - {fileID: 21300000, guid: b5cd482814678ed48a78ddb4d7d55080, type: 3}
   - {fileID: 21300000, guid: e1a37436f0cc48045acca1e1cd26da2b, type: 3}
+  maxProjectileSize: 10
+  minProjectileSize: 0.2
+  randomiseSize: 0
 --- !u!1001 &702219869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8358,7 +8364,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1357918159}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 695544741}
+        m_TargetAssemblyTypeName: ProjectileManager, Assembly-CSharp
+        m_MethodName: RandomSize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1357918159
 MonoBehaviour:
   m_ObjectHideFlags: 0
