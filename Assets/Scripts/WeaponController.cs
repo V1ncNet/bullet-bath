@@ -10,6 +10,7 @@ public class WeaponController : MonoBehaviour
 
     List<InputDevice> rightHandedControllers;
     ObjectPooler pooler;
+    ProjectileManager pm;
     Transform muzzle;
 
     static int poolIndex = 0;
@@ -25,6 +26,9 @@ public class WeaponController : MonoBehaviour
         InputDevices.GetDevicesWithCharacteristics(desiredCharacteristics, rightHandedControllers);
 
         pooler = ObjectPooler.instance;
+        pm = ProjectileManager.proManager;
+
+        Debug.Log(pm.projectiles[0].fireRate);
 
         muzzle = transform.GetChild(1);
         if (muzzle == null)
@@ -51,8 +55,13 @@ public class WeaponController : MonoBehaviour
                 if (cooldown <= .0f)
                 {
                     GameObject go = pooler.SpawnFromPool(pooler.pools[poolIndex].tag, muzzle.position, muzzle.rotation);
-                    Projectile projectile = go.GetComponent<Projectile>();
-                    cooldown = 1 / projectile.fireRate;
+                    int fr = pm.projectiles[poolIndex].fireRate;
+                    if (fr <= 0)
+                    {
+                        Debug.LogWarning("WeaponController could not get projectile's fire rate. The fire rate is less or equal to 0.");
+                        fr = 1;
+                    }
+                    cooldown = 1 / (float)fr;
                 }
             }
 
@@ -94,23 +103,23 @@ public class WeaponController : MonoBehaviour
 
     public void NextButton()
     {
-        Debug.Log("Next button pressed");
         poolIndex++;
         if (poolIndex >= pooler.pools.Count)
         {
             poolIndex = 0;
         }
         currentProjectileText.text = pooler.pools[poolIndex].tag;
+        pm.SetProjectile(poolIndex);
     }
 
     public void PreviousButton()
     {
-        Debug.Log("Prev button pressed");
         poolIndex--;
         if (poolIndex < 0)
         {
             poolIndex = pooler.pools.Count - 1;
         }
         currentProjectileText.text = pooler.pools[poolIndex].tag;
+        pm.SetProjectile(poolIndex);
     }
 }
