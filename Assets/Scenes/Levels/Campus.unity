@@ -7163,6 +7163,10 @@ MonoBehaviour:
     prefab: {fileID: 3678250383542577223, guid: 775933f3f1ae4409782277fd8d13d44f,
       type: 3}
     size: 5000
+  - tag: Cube
+    prefab: {fileID: 3620767956432720682, guid: b3e48b5b2e3a9694a836a2779eb0ed0b,
+      type: 3}
+    size: 5000
 --- !u!114 &695544741
 MonoBehaviour:
   m_ObjectHideFlags: 0
